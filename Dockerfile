@@ -1,5 +1,5 @@
 # 使用適合 GPU 的基底映像檔，這裡選擇 NVIDIA 提供的 Python 映像檔
-FROM nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu20.04
+FROM nvidia/cuda:12.8.0-runtime-ubuntu20.04
 
 # 安裝系統依賴
 RUN apt-get update && apt-get install -y \
