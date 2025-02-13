@@ -48,5 +48,5 @@ EXPOSE 7860
 # 複製當前目錄下的所有文件到 /workspace 資料夾
 COPY . /workspace/
 
-# 使用 CMD 執行 move_cache() 和啟動 gradio 應用
-CMD python -c "from transformers.utils import move_cache; move_cache()" && /opt/conda/bin/python gradio_app.py
+# 設置正確的啟動命令，確保使用絕對路徑
+CMD ["/opt/conda/bin/python", "gradio_app.py"]
