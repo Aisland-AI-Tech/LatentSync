@@ -10,9 +10,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # 安裝 Conda
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py39_23.1.0-1-Linux-x86_64.sh && \
-    bash Miniconda3-py39_23.1.0-1-Linux-x86_64.sh -b -f -p /opt/conda && \
-    rm Miniconda3-py39_23.1.0-1-Linux-x86_64.sh && \
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh && \
+    bash Miniconda3-py310_23.1.0-1-Linux-x86_64.sh -b -f -p /opt/conda && \
+    rm Miniconda3-py310_23.1.0-1-Linux-x86_64.sh && \
     /opt/conda/bin/conda clean -ya
 
 # 設定 PATH
