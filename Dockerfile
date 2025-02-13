@@ -45,5 +45,8 @@ RUN mkdir -p ~/.cache/torch/hub/checkpoints && \
 # 開放容器內部端口
 EXPOSE 7860
 
-# 設定容器啟動時執行的命令
-CMD ["python gradio_app.py"]
+# 複製當前目錄下的所有文件到 /workspace 資料夾
+COPY . /workspace/
+
+# 設置正確的啟動命令，確保使用絕對路徑
+CMD ["/opt/conda/bin/python", "gradio_app.py"]
